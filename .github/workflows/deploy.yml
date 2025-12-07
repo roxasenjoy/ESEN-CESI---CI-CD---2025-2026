@@ -99,9 +99,9 @@ jobs:
           SITE_URL="${{ steps.deployment.outputs.page_url }}"
           CONTENT=$(curl -s "$SITE_URL")
           
-          # Vérifier que le titre "Chez Claude" est présent dans la page
-          if echo "$CONTENT" | grep -q "Chez Claude"; then
-            echo "✅ Le contenu est correct - 'Chez Claude' trouvé"
+          # Vérifier que le titre "Chez Andrew" est présent dans la page
+          if echo "$CONTENT" | grep -q "Chez Andrew"; then
+            echo "✅ Le contenu est correct - 'Chez Andrew' trouvé"
           else
             echo "❌ Le contenu ne semble pas correct"
             exit 1
