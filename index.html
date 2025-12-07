@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Restaurant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Georgia, serif;
+            background-color: #fdf6e3;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #c0392b, #e74c3c);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .menu-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .menu-section h2 {
+            color: #c0392b;
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .menu-item-name {
+            font-weight: bold;
+        }
+        .menu-item-description {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .menu-item-price {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🍽️ Chez Claude</h1>
+        <p>Restaurant gastronomique depuis 2024</p>
+    </header>
+    
+    <main>
+        <section class="menu-section">
+            <h2>🥗 Entrées</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Salade du Chef</div>
+                    <div class="menu-item-description">Mesclun, tomates cerises, croûtons maison</div>
+                </div>
+                <div class="menu-item-price">8€</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Soupe du jour</div>
+                    <div class="menu-item-description">Préparée avec des légumes frais de saison</div>
+                </div>
+                <div class="menu-item-price">6€</div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>🍝 Plats</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Plat du jour</div>
+                    <div class="menu-item-description">Demandez au serveur</div>
+                </div>
+                <div class="menu-item-price">15€</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Steak Frites</div>
+                    <div class="menu-item-description">Entrecôte 250g, frites maison, sauce au choix</div>
+                </div>
+                <div class="menu-item-price">22€</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Risotto aux champignons</div>
+                    <div class="menu-item-description">Riz arborio, champignons de Paris, parmesan</div>
+                </div>
+                <div class="menu-item-price">18€</div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>🍰 Desserts</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Tarte du jour</div>
+                    <div class="menu-item-description">Faite maison chaque matin</div>
+                </div>
+                <div class="menu-item-price">7€</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Mousse au chocolat</div>
+                    <div class="menu-item-description">Chocolat noir 70%, chantilly maison</div>
+                </div>
+                <div class="menu-item-price">8€</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Chez Claude - Tous droits réservés</p>
+        <p>Déployé automatiquement avec GitHub Actions 🚀</p>
+    </footer>
+</body>
+</html>
