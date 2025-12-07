@@ -1,11 +1,11 @@
-name: Ouverture du restaurant
+name: Exercice 1
 
 on:
   push:
     branches: [main]
 
 jobs:
-  ouverture:
+  exercice1:
     runs-on: ubuntu-latest
     steps:
       - name: Annoncer l'ouverture

@@ -1,4 +1,4 @@
-name: Contrôle des additions
+name: Exercice 2
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  verification:
+  exercice2:
     runs-on: ubuntu-latest
 
     steps:
