@@ -1,0 +1,9 @@
+# ===========================================
+# EXO 6 : Valider avant d'encaisser
+# ===========================================
+# Pas de nouveau workflow
+# Configuration dans GitHub :
+# Settings > Branches > Add branch ruleset
+# - Protéger main
+# - Activer "Require status checks to pass"
+# - Sélectionner le job "verification"

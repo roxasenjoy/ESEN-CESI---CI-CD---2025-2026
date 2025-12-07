@@ -1,0 +1,32 @@
+# ===========================================
+# EXO 4 : Vérifier la carte du menu (lint)
+# ===========================================
+name: Exo4 - Inspection du restaurant
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  inspection:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code du restaurant
+        uses: actions/checkout@v4
+
+      - name: Installer la caisse enregistreuse
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Installer les outils
+        run: npm install
+
+      - name: Vérifier la carte du menu
+        run: npm run lint
+
+      - name: Vérifier les additions
+        run: npm test
