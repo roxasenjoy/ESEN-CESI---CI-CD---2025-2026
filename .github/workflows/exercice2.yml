@@ -1,0 +1,26 @@
+name: Contrôle des additions
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verification:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code du restaurant
+        uses: actions/checkout@v4
+
+      - name: Installer la caisse enregistreuse
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Installer les outils
+        run: npm install
+
+      - name: Vérifier les additions
+        run: npm test
