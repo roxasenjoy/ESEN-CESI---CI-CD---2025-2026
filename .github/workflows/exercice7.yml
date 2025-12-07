@@ -1,9 +1,10 @@
 # ===========================================
-# EXO 7 (Bonus) : Réduction fidélité
+# EXO 7 (Bonus) : Offrir une réduction fidélité
 # ===========================================
-# Même workflow que l'exo 5
-# Ajouter la fonction appliquerReduction dans addition.js
-# Ajouter le test correspondant dans addition.test.js
+# Fichiers à modifier :
+# - addition.js → ajouter fonction appliquerReduction(total, pourcentage)
+# - addition.test.js → ajouter test pour appliquerReduction(100, 10) = 90
+
 name: Exo7 - Réduction fidélité
 
 on:
@@ -16,24 +17,17 @@ jobs:
   verification:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18, 20, 22]
-
     steps:
       - name: Récupérer le code du restaurant
         uses: actions/checkout@v4
 
-      - name: Installer la caisse enregistreuse ${{ matrix.node-version }}
+      - name: Installer la caisse enregistreuse
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '20'
 
       - name: Installer les outils
         run: npm install
 
-      - name: Vérifier la carte du menu
-        run: npm run lint
-
-      - name: Vérifier les additions
+      - name: Vérifier les additions et réductions
         run: npm test

@@ -1,12 +1,16 @@
-name: Exercice 1
+# ===========================================
+# EXO 1 : Ouverture du restaurant
+# ===========================================
+name: Exo1 - Ouverture du restaurant
 
 on:
   push:
     branches: [main]
 
 jobs:
-  exercice1:
+  ouverture:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Annoncer l'ouverture
         run: echo "Le restaurant est ouvert !"
