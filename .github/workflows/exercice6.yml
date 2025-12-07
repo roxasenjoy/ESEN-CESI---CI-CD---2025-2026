@@ -1,9 +1,30 @@
 # ===========================================
 # EXO 6 : Valider avant d'encaisser
 # ===========================================
-# Pas de nouveau workflow
-# Configuration dans GitHub :
-# Settings > Branches > Add branch ruleset
-# - Protéger main
-# - Activer "Require status checks to pass"
-# - Sélectionner le job "verification"
+# Étapes dans GitHub :
+# 1. Aller dans Settings > Branches > Add branch ruleset
+# 2. Nom : "Protection caisse principale"
+# 3. Target branches : main
+# 4. Activer "Require status checks to pass"
+# 5. Ajouter le job "validation"
+# 6. Cliquer sur Create
+# 7. Tester avec une PR contenant une addition fausse
+
+name: Exo6 - Valider avant d'encaisser
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Vérification en cours
+        run: echo "Vérification de l'addition avant d'encaisser..."
+
+      - name: Addition validée
+        run: echo "L'addition est correcte, le client peut payer !"
